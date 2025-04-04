@@ -1,0 +1,71 @@
+/* Styles for message delete functionality */
+
+.delete-message-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+  padding: 5px;
+  font-size: 16px;
+  z-index: 10;
+}
+
+.delete-message-btn:hover {
+  opacity: 1;
+  color: red;
+}
+
+.message-item {
+  position: relative;
+}
+
+.message-item.deleting {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.message-item.deleted {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+/* Confirmation dialog styles */
+.delete-confirm {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+  text-align: center;
+}
+
+.delete-confirm-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.delete-confirm-buttons button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-confirm-cancel {
+  background-color: #f2f2f2;
+}
+
+.delete-confirm-delete {
+  background-color: #ff5252;
+  color: white;
+}
